@@ -12,7 +12,7 @@ SHM()
     double x0    = 0;
     double v0    = 1;
     double h     = 0.01;
-    double t_max = 15;
+    double t_max = 20;
     size_t n     = t_max / h;
     std::vector<double> T(n), X(n), V(n), A(n);
 
@@ -43,7 +43,10 @@ int main()
     for(size_t i = 0; i < x.size(); i++)
         file << _setp << t[i] << _setw << x[i] << std::endl;
 
-    gp << "set title 'some'\n";
-    gp << "plot 'output.dat' using 1:2 with lines\n";
+    gp << "set grid\n";
+    gp << "set title 'SHM using Euler method'\n";
+    gp << "set xlabel 't (s)\n";
+    gp << "set ylabel 'x (s)\n";
+    gp << "plot 'output.dat' with lines notitle \n";
     return 0;
 }
