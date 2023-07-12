@@ -16,4 +16,4 @@ Collection of C++ computational physics programs
 # Screenshots
 
 ![](Images/two_dim_projectile.png)
-![](Images/two_dim_projectile.png)
+![](Images/two_dim_arb_projectile.png)
