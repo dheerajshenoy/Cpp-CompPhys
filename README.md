@@ -26,3 +26,5 @@ directly from within the C++ program
 ![](Images/two_dim_projectile.png)
 ![](Images/two_dim_arb_projectile.png)
 ![](Images/shm_euler.png)
+![](Images/damped_shm_x_v_a_t.png)
+![](Images/damped_shm_v_vs_t.png)
