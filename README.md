@@ -17,3 +17,4 @@ Collection of C++ computational physics programs
 
 ![](Images/two_dim_projectile.png)
 ![](Images/two_dim_arb_projectile.png)
+![](Images/shm_euler.png)
