@@ -101,7 +101,7 @@ int main()
     
     file.close();
 
-    gp << "set title '2d projectile motion'\n";
+    gp << "set title '2d projectile motion with air drag'\n";
     gp << "set xlabel 't (s)'\n";
     gp << "set ylabel 'y (m)'\n";
     gp << "plot 'output.dat' with lines\n";
