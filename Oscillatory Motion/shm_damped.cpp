@@ -52,9 +52,10 @@ int main()
     
     gp << "set title 'Damped SHM'\n";
     gp << "set xlabel 't (s)'\n";
+    // gp << "set ylabel 'v (m/s)'\n";
     gp << "set grid\n";
-    // gp << "plot 'output.dat' using 1:2 with lines title 'X(m)', 'output.dat' using 1:3 with lines title 'V (m/s)', 'output.dat' using 1:4 with lines title 'A (m/s^2)'\n";
-    gp << "plot 'output.dat' using 2:3 with lines\n";
+    gp << "plot 'output.dat' using 1:2 with lines title 'X(m)', 'output.dat' using 1:3 with lines title 'V (m/s)', 'output.dat' using 1:4 with lines title 'A (m/s^2)'\n";
+    // gp << "plot 'output.dat' using 2:3 with lines\n";
 
     return 0;
 }
