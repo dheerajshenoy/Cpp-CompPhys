@@ -51,11 +51,14 @@ int main()
         file << _setp << t[i] << _setw << _setp << x[i] << _setw << _setp << v[i] << _setw << _setp << a[i] << std::endl;
     
     gp << "set title 'Damped SHM'\n";
-    gp << "set xlabel 't (s)'\n";
-    // gp << "set ylabel 'v (m/s)'\n";
     gp << "set grid\n";
-    gp << "plot 'output.dat' using 1:2 with lines title 'X(m)', 'output.dat' using 1:3 with lines title 'V (m/s)', 'output.dat' using 1:4 with lines title 'A (m/s^2)'\n";
-    // gp << "plot 'output.dat' using 2:3 with lines\n";
+    gp << "set xlabel 't (s)'\n";
+    gp << "set ylabel 'v (m/s)'\n";
+
+    gp << "plot 'output.dat' using 2:3 with lines notitle\n";
+
+    // Uncomment this for x, v, a vs t curves
+    // gp << "plot 'output.dat' using 1:2 with lines title 'X(m)', 'output.dat' using 1:3 with lines title 'V (m/s)', 'output.dat' using 1:4 with lines title 'A (m/s^2)'\n";
 
     return 0;
 }
