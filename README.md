@@ -25,6 +25,9 @@ directly from within the C++ program
 
 ![](Images/two_dim_projectile.png)
 ![](Images/two_dim_arb_projectile.png)
+![](Images/two_dim_projectile_with_airdrag.png)
 ![](Images/shm_euler.png)
 ![](Images/damped_shm_x_v_a_t.png)
 ![](Images/damped_shm_v_vs_t.png)
+![](Images/forced_oscillation.png)
+![](Images/forced_oscillation_x_v_a_t.png.png)
