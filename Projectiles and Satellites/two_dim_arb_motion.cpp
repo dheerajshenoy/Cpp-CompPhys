@@ -4,14 +4,13 @@
 #include <fstream>
 #include <array>
 #include <vector>
-
 #include "../gnuplot-iostream.h"
 #include "../utils.cpp"
 
+// NOT DONE
+
 /*
-
-
-
+    Program to visualize 2d projectile motion along an arbitrary direction with angle theta
 */
 
 std::array<std::vector<double>, 5> TwoDimMotion(double v0, double theta, double t_max, double h, double g)
@@ -54,26 +53,25 @@ int main()
     Gnuplot gp;
 
     auto data = TwoDimMotion(10, 45, 30, 0.5, 9.8);
-    // auto t = data[0];
+    auto t = data[0];
     auto x = data[1];
     auto y = data[2];
-
     auto vx = data[3];
     auto vy = data[4];
 
     std::ofstream file("output.dat");
     
     for(size_t i = 0; i < x.size(); i++)
-        file << std::setprecision(17) << x[i]  << std::setw(40)
-             << std::setprecision(17) << y[i]  << std::setw(40) << std::endl;
-        // file << std::setprecision(17) << t[i]  << std::setw(40)
-             // << std::setprecision(17) << vx[i] << std::setw(40)
-             // << std::setprecision(17) << vy[i] << std::setw(40) << std::endl;
+        file << _setp << t[i]  << _setw
+             << _setp << x[i]  << _setw
+             << _setp << y[i]  << _setw
+             << _setp << vx[i] << _setw
+             << _setp << vy[i] << _setw << std::endl;
     
     gp << "set title '2d Projectile Motion'\n";
     gp << "set xlabel 'x (m)'\n";
     gp << "set ylabel 'y (m)'\n";
-    gp << "plot 'output.dat' with lines\n";
+    gp << "plot 'output.dat' using 1:3 with lines\n";
 
     return 0;
 

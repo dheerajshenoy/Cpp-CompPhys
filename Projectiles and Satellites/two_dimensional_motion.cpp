@@ -6,10 +6,9 @@
 
 #include "../gnuplot-iostream.h"
 #include "../utils.cpp"
+
 /*
-
-
-
+    Program to visualize the two dimensional projectile motion
 */
 
 std::array<std::vector<double>, 5> TwoDimMotion(double vx, double height, double t_max, double h, double g)
@@ -67,8 +66,6 @@ int main()
     auto y = data[2];
     auto vx = data[3];
     auto vy = data[4];
-
-    Utils::printarray(x);
 
     std::ofstream file("output.dat");
 

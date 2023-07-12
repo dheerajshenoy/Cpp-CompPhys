@@ -46,6 +46,10 @@ class ProjectileMotion
                 Vx[i + 1] = Vx[i] + Ax[i] * h;
                 Vy[i + 1] = Vy[i] + Ay[i] * h;
                 X[i + 1] = X[i] + Vx[i] * h;
+
+                
+                if (Y[i] + Vy[i] * h <= 0)
+                    break;
                 Y[i + 1] = Y[i] + Vy[i] * h;
             }
 
@@ -62,7 +66,7 @@ class ProjectileMotion
     double m = 1;
     double v0 = 9.8;
     double TH = 45; // degrees
-    double t_max = 10;
+    double t_max = 20;
     double h = 0.01; // time step in seconds
     uint n = t_max / h;
     std::vector<double> T, X, Y, Vx, Vy, Ax, Ay;
@@ -92,11 +96,14 @@ int main()
     auto y = data[1];
 
     for(size_t i = 0; i < x.size(); i++)
-        file << std::setprecision(17) << x[i] << std::setw(40)
-            << std::setprecision(17) << y[i] << std::endl;
+        file << _setp << x[i] << _setw
+             << _setp << y[i] << std::endl;
     
     file.close();
 
+    gp << "set title '2d projectile motion'\n";
+    gp << "set xlabel 't (s)'\n";
+    gp << "set ylabel 'y (m)'\n";
     gp << "plot 'output.dat' with lines\n";
 
     return 0;
