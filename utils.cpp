@@ -6,6 +6,7 @@
 #define _setw std::setw(40)
 #define _setp std::setprecision(17)
 #define PI 3.1415926
+#define CL 3e8
 
 namespace dj
 {
