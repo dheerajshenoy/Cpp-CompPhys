@@ -1,4 +1,4 @@
-#include "../utils.cpp"
+#include "../utils.hpp"
 #include "../gnuplot-iostream.h"
 #include <array>
 #include <fstream>

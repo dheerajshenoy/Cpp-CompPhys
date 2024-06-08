@@ -1,7 +1,7 @@
 #include <cmath>
 #include <iostream>
 #include <iomanip>
-#include "../utils.cpp"
+#include "../utils.hpp"
 #include "../gnuplot-iostream.h"
 #include <array>
 #include <vector>

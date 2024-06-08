@@ -5,7 +5,7 @@
 #include <array>
 #include <vector>
 #include "../gnuplot-iostream.h"
-#include "../utils.cpp"
+#include "../utils.hpp"
 
 // NOT DONE
 

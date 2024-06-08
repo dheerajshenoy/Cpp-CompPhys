@@ -1,0 +1,8 @@
+#+TITLE: Monte Carlo Methods
+#+AUTHOR: Dheeraj Vittal Shenoy
+#+DATE: 08 Dec 2023
+
+* Programs
+** Calculating PI
+1. monte_carlo_pi.py
+   [[file://animation.mp4][FILE]]

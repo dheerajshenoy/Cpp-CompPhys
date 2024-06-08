@@ -5,7 +5,7 @@
 #include <vector>
 
 #include "../gnuplot-iostream.h"
-#include "../utils.cpp"
+#include "../utils.hpp"
 
 /*
     Program to visualize the two dimensional projectile motion
